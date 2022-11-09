@@ -27,7 +27,8 @@ public final class SecurityUtils {
             .flatMap(authentication -> Mono.justOrEmpty(extractPrincipal(authentication)));
     }
 
-    private static String extractPrincipal(Authentication authentication) {
+    // Inicialmente es private
+    public static String extractPrincipal(Authentication authentication) {
         if (authentication == null) {
             return null;
         } else if (authentication.getPrincipal() instanceof UserDetails) {

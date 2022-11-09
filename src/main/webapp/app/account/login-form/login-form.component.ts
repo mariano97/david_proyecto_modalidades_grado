@@ -15,7 +15,7 @@ export default class LoginForm extends Vue {
   public authenticationError = null;
   public login = null;
   public password = null;
-  public rememberMe: boolean = null;
+  public rememberMe = true;
 
   public doLogin(): void {
     const data = { username: this.login, password: this.password, rememberMe: this.rememberMe };

@@ -18,6 +18,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Pageable;
 import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.security.core.context.ReactiveSecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -313,7 +314,13 @@ public class UserService {
 
     @Transactional(readOnly = true)
     public Mono<User> getUserWithAuthorities() {
-        return SecurityUtils.getCurrentUserLogin().flatMap(userRepository::findOneWithAuthoritiesByLogin);
+        // return SecurityUtils.getCurrentUserLogin().flatMap(userRepository::findOneWithAuthoritiesByLogin);
+        return ReactiveSecurityContextHolder
+                .getContext()
+                .flatMap(authentication -> {
+                    String principal = SecurityUtils.extractPrincipal(authentication.getAuthentication());
+                    return userRepository.findOneWithAuthoritiesByLogin(principal);
+                });
     }
 
     /**
