@@ -1,0 +1,11 @@
+id;nombre;acta;fecha_inicio;fecha_termino;tipo_modalidad_id
+1;Operaciones input Gerente;false;2022-10-10T17:51:38;2022-10-10T08:42:40;1
+2;wireless;false;2022-10-10T03:05:49;2022-10-10T10:16:43;2
+3;Reducido Guapo XSS;false;2022-10-10T22:47:50;2022-10-10T07:07:16;3
+4;Hormigon;true;2022-10-10T05:35:01;2022-10-10T21:11:22;4
+5;Blanco;true;2022-10-10T07:11:52;2022-10-10T22:18:14;5
+6;Adelante;true;2022-10-10T05:11:38;2022-10-10T19:45:28;6
+7;B2C plataforma;true;2022-10-10T07:13:20;2022-10-10T14:47:15;7
+8;Card eyeballs;false;2022-10-10T07:42:18;2022-10-10T23:15:01;8
+9;connect Quinta;false;2022-10-10T12:46:05;2022-10-10T07:51:47;9
+10;Bedfordshire fidelidad Integrado;true;2022-10-10T08:17:17;2022-10-10T23:26:44;10

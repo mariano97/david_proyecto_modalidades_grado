@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+    <!--
+        Added the constraints for entity Proyecto.
+    -->
+    <changeSet id="20221011022134-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="tipo_modalidad_id"
+                                 baseTableName="proyecto"
+                                 constraintName="fk_proyecto__tipo_modalidad_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tabla_contenido"/>
+
+        <addForeignKeyConstraint baseColumnNames="empresa_id"
+                                 baseTableName="proyecto"
+                                 constraintName="fk_proyecto__empresa_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="empresa"/>
+
+        <addForeignKeyConstraint baseColumnNames="arl_id"
+                                 baseTableName="proyecto"
+                                 constraintName="fk_proyecto__arl_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="arl"/>
+    </changeSet>
+</databaseChangeLog>
