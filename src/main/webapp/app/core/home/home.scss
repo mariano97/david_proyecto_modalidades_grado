@@ -1,0 +1,16 @@
+.home {
+  height: 100vh;
+  background-color: #8f141b;
+
+  .card-custom {
+    background-color: #edeff0;
+    border-radius: 10px;
+    border: 1px #edeff0 solid;
+    flex-direction: row !important;
+    height: 70% !important;
+  }
+
+  .logo_container {}
+
+  .container_ingreso {}
+}

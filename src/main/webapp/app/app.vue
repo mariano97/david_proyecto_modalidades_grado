@@ -4,8 +4,8 @@
     <div id="app-header">
       <jhi-navbar></jhi-navbar>
     </div>
-    <div class="container-fluid">
-      <div class="card jh-card">
+    <div class="container-fluiddd">
+      <div class="container_prinicpal">
         <router-view></router-view>
       </div>
       <b-modal id="login-page" hide-footer lazy>

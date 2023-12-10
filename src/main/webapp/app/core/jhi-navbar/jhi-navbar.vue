@@ -1,5 +1,5 @@
 <template>
-  <b-navbar data-cy="navbar" toggleable="md" type="dark" class="jh-navbar">
+  <b-navbar data-cy="navbar" toggleable="md" type="dark" class="jh-navbar" v-if="authenticated">
     <b-navbar-brand class="logo" b-link to="/">
       <span class="logo-img"></span>
       <span class="navbar-title">pagina_modalidades_grado</span> <span class="navbar-version">{{ version }}</span>
